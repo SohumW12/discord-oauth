@@ -6,8 +6,6 @@ const {REST} = require('@discordjs/rest')
 const {Routes} = require('discord-api-types/v9')
 
 
-//bot token
-const token = ''
 
 
 const rest = new REST().setToken(token)
@@ -16,10 +14,13 @@ const rest = new REST().setToken(token)
 const CLIENT_ID = ''
 //client secret (in oauth2  section)
 const CLIENT_SECRET = ''
+//bot token
+const token = ''
+//The redirect url you set in the developer portal
+const redirect_uri = '' // example: http://localhost/discordcallback
 
 const fetchUser = async id => rest.get(Routes.user(id))
 
-const redirect_uri = '' // example: http://localhost/discordcallback
 
 const DiscordOauth2 = require("discord-oauth2");
 const oauth = new DiscordOauth2();
